@@ -1,0 +1,22 @@
+h1 { color: red; }
+.table { color: red; 
+        background-color: rgba(0, 0, 0, 0.39); 
+        font: italic; 
+        text-decoration: underline;     
+        }
+#heading_2 {color: orange;
+            text-align: center;
+            }
+.table_2 {text-transform: uppercase;
+          text-indent: 2cm;
+          line-height: 150%;
+          margin-left: 400px;
+          padding-right: 5%;
+          
+        }
+
+p {border: 1cm;
+    border-color: black;
+    }
+
+    
