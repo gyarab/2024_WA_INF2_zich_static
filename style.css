@@ -1,4 +1,4 @@
-h1 { color: red; }
+h1 { color: red; border: 1cm;}
 .table { color: red; 
         background-color: rgba(0, 0, 0, 0.39); 
         font: italic; 
@@ -15,8 +15,6 @@ h1 { color: red; }
           
         }
 
-p {border: 1cm;
-    border-color: black;
-    }
+
 
     
