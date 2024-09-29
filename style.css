@@ -9,6 +9,12 @@ h1 { color: red; border: 1cm; text-shadow: 3px 3px 5px black;}
 #heading_2 {color: orange;
             text-align: center;
             }
+#heading_3 {color: blue;       
+            text-align: center;
+           }
+#heading_4 {color: blue;
+            text-align: center;
+           }
 .table_2 {text-transform: uppercase;
           text-indent: 2cm;
           line-height: 150%;
