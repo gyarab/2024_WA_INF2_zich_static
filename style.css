@@ -1,6 +1,6 @@
 h1 { color: red; border: 1cm;}
 .table { color: red; 
-        background-color: rgba(0, 0, 0, 0.39); 
+        background: rgba(0, 0, 0, 0.39); 
         font: italic; 
         text-decoration: underline;     
         }
@@ -11,8 +11,12 @@ h1 { color: red; border: 1cm;}
           text-indent: 2cm;
           line-height: 150%;
           margin-left: 400px;
-          padding-right: 5%;
-          
+          margin-right: 400px;
+          padding-right: 300px;
+          background: url(f1.jpg);
+          background-size: 500px;
+          background-color: rgba(0, 0, 0, 0.5);
+
         }
 
 
