@@ -1,50 +1,59 @@
-h1 { color: red; border: 1cm; text-shadow: 3px 3px 5px black;}
+  .box {
+    width: 100px;
+    flex-grow: 1;
+  }
 
-.table { color: red; 
-        background: rgba(0, 0, 0, 0.39); 
-        font: italic; 
-        text-decoration: underline;     
-        }
-.table > th {background: rgb(255, 0, 0)}
-#heading_2 {color: orange;
-            text-align: center;
-            }
-#heading_3 {color: blue;       
-            text-align: center;
-           }
-#heading_4 {color: blue;
-            text-align: center;
-           }
-.table_2 {text-transform: uppercase;
-          text-indent: 2cm;
-          line-height: 150%;
-          margin-left: 400px;
-          margin-right: 400px;
-          padding-right: 300px;
-          background: url(f1.jpg);
-          border-radius: 25px;
-          background-size: 500px;
-          background-color: rgba(0, 0, 0, 0.5);
+  .img {
+    width: 50px;
+    height: auto;
+    border-radius: 10%;
+    margin-bottom: 10%;
+    min-width: 50%;
+  }
 
-        }
+  .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto
+  }
 
-.table_2:hover {text-transform: uppercase;
-        text-indent: 2cm;
-        line-height: 150%;
-        margin-left: 400px;
-        margin-right: 400px;
-        padding-right: 300px;;
-        background: url(f1.jpg);
-        background-size: 50px;
-        background-color: rgba(255, 255, 255, 0.5);
-        transform: rotateX(180deg);
-}
+  .flex-container {
+  display: flex;
+  text-align: center;
+  }
 
-        
-div table{background-color: rgba(0, 0, 0, 0.5)}
-.li {
-    color:white;
-    text-align: left;
+  .one {
+    background-color: gold;
+  }
+
+  .two {
+    background-color: silver;
+  }
+
+  .three {
+    background-color: burlywood;
+  }
+
+  .text {
+    font-size:2vw;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px#000000;
+    }
+
+    @media only screen and (max-width: 900px) {
+      .wrapper {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto
+      }
+    }
+    
+    @media only screen and (max-width: 600px) {
+      .wrapper {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto
+      }
     }
 
     
