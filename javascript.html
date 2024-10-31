@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+    <title>JS test</title>
+    <style>
+        .item {
+            background-color: aliceblue;
+            border: 1px solid blue;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="tlacitko" value="TEST"/>
+    <input type="text" id="vstup" value=""/>
+    <div id="test"></div>
+    <script>
+        console.log("Hello world");
 
-    </head>
-    <body>
-        <input type="button" id="tlacitko" value="test"/>
-        <input type="text" id="vstup" value=""/>
-        <div id="test"></div>
-
-        <script>
-            console.log("Hello world")
+        function remove(element) {
+            element.parentNode.removeChild(element);
+        }
+        function novyElement(before) {
             let el = document.getElementById("test");
-            el.innerHTML="Hello world";
-        
-            let a = 2;
-            let b = "2";
 
-            console.log(a+a);
-            console.log(a+b);
+            let inp = document.getElementById("vstup")
+            let div = document.createElement("div");
+            div.classList.add("item");
+            div.innerHTML=inp.value;
 
-            let arr=["jedna", "Dva", "Tři"];
-            console.log(arr);    
-            
-            for (let i=0; i<arr.length; i++) {
-                console.log(i + ": " + arr[i]);
-            }
-
-            let div=document.createElement("div");
-            div.innerHTML="pokus";
-            el.appendChild(div);
-
+            // uzaviraci tlacitko
             let divClose = document.createElement("div");
-            divClose.innerHTML="x"
+            divClose.innerHTML = "❌";
+            divClose.addEventListener("click", (event) => {
+                remove(div);
+            });
+            div.appendChild(divClose);
 
-            for (let i=0; i<arr.length; i++) {
-                let div=document.createElement("div");
-                div.innerHTML=arr[i];
+            // tlačítko co přidá novou položku před aktuální prvek
+            let divAdd = document.createElement("div");
+            divAdd.innerHTML = "➕";
+            divAdd.addEventListener("click", (event) => {
+                // before je aktuální div
+                novyElement(div);
+            });
+            div.appendChild(divAdd);
+
+            
+            if (before) {
+                // přidá před before
+                el.insertBefore(div, before)
+            }
+            else {
+                // přidá nakonec
                 el.appendChild(div);
             }
+        }
 
-            let tlacitko=dokument.document.getElementById("tlacitko");
-                tlacitko.addEventListener("click",(event) => {novy();})
+        let tlacitko=document.getElementById("tlacitko");
+        tlacitko.addEventListener("click", (event) => {
+            novyElement();
+        })
 
-            function remove(element) {
-                element.parentNode.removeChild(element);
-            }
-  
-            function novy(event) {
-                let el = document.getElementById("test");
-                
-                let div = document.createElement("div");
-                div.classList.add("item");
-                div.style.color="red";
-                div.innerHTML="test";
-                div.style.fontSize="0px";
-
-                el.appendChild(div);
-            }
-
-        </script>
-    </body>
+    </script>
+</body>
 </html>
