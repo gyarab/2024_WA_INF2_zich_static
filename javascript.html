@@ -33,7 +33,11 @@
             let divClose = document.createElement("div");
             divClose.innerHTML = "❌";
             divClose.addEventListener("click", (event) => {
-                remove(div);
+                div.style.opacity=0.5;
+                setTimeout(() => {
+                    remove(div);
+                }, 1000);
+            
             });
             div.appendChild(divClose);
 
@@ -45,7 +49,9 @@
                 novyElement(div);
             });
             div.appendChild(divAdd);
-
+            
+            div.dataset.hodnota=5;
+            div.dataset.test="ahoj";
             
             if (before) {
                 // přidá před before
@@ -55,11 +61,17 @@
                 // přidá nakonec
                 el.appendChild(div);
             }
+            setTimeout(()=> {
+                console.log("Test");
+                novyElement();
+            }, 500);
+
         }
 
         let tlacitko=document.getElementById("tlacitko");
         tlacitko.addEventListener("click", (event) => {
-            novyElement();
+
+            setTimeout(novyElement, 1000);
         })
 
     </script>
